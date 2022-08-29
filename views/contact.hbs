@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+    <link rel="icon" href="../../asset/logo_dumbways.png">
+    <title>Contact</title>
+  </head>
+  <body>
+    
+    <!-- Navigasi Bar -->
+   <nav>
+    <ul>
+      <li>
+        <a href="/">
+          <img src="../assets/img/logo_dumbways.png" alt="Dumbways" />
+        </a>
+      </li>
+      <li>
+        <a href="/"> Home </a>
+      </li>
+      <li>
+        {{#if isLogin}}
+        <a href="/project"> Add Project</a>
+        {{/if}}
+      </li>
+    </ul>
+
+    <div class="btn">
+      {{#if isLogin}}
+        <a href="#" class="btnAnother">
+         <button>Haii, {{user.username}}</button>
+        </a>
+        <a href="/logout" class="btnAnother">
+         <button>Logout</button>
+        </a>
+      {{else}}
+        <a href="/register" class="btnAnother">
+         <button>Register</button>
+        </a>
+        <a href="/login" class="btnAnother">
+         <button>Login</button>
+        </a>
+      {{/if}}
+      <a href="/contact" class="btnChild">
+        <button>Contact Me</button>
+      </a>
+    </div>
+  </nav>
+
+    <!-- Form -->
+    <section>
+      <div class="container">
+        <h1>GET IN TOUCH</h1>
+
+        <form action="">
+          <div>
+            <label for="name">Name</label><br />
+            <input class="style" type="text" id="name" />
+          </div>
+          <div>
+            <label for="email">Email</label><br />
+            <input class="style" type="email" id="email" />
+          </div>
+          <div>
+            <label for="phone">Phone Number</label><br />
+            <input class="style" type="number" id="phone" />
+          </div>
+          <div>
+            <label for="subject">Subject</label><br />
+            <select class="style" id="subject">
+              <option></option>
+              <option>Frontend</option>
+              <option>Backend</option>
+              <option>Fullstack</option>
+              <option>UI/UX</option>
+              <option>Data Science</option>
+              <option>Data Analyst</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Your Message</label><br />
+            <textarea class="style" id="message" cols="40" rows="6"></textarea>
+          </div>
+          <div class="btnForm">
+            <button type="button" onclick="btnSubmit()">submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="../assets/js/contact.js"></script>
+  </body>
+</html>

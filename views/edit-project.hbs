@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
+  <link rel="icon" href="../assets/img/logo_dumbways.png">
+    <title>Edit Project</title>
+</head>
+<body>
+    
+       <!-- Navigasi Bar -->
+   <nav>
+    <ul>
+      <li>
+        <a href="/">
+          <img src="../assets/img/logo_dumbways.png" alt="Dumbways" />
+        </a>
+      </li>
+      <li>
+        <a href="/"> Home </a>
+      </li>
+      <li>
+        <a href="/project"> Add Project</a>
+      </li>
+    </ul>
+
+    <div class="btn">
+      {{#if isLogin}}
+      <a href="#" class="btnAnother">
+        <button>Haii, {{user.username}}</button>
+      </a>
+      <a href="/logout" class="btnAnother">
+        <button>Logout</button>
+      </a>
+      {{else}}
+      <a href="/register" class="btnAnother">
+        <button>Register</button>
+      </a>
+      <a href="/login" class="btnAnother">
+        <button>Login</button>
+      </a>
+      {{/if}}
+      <a href="/contact" class="btnChild">
+        <button>Contact Me</button>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Add My Project -->
+     <!-- Form -->
+     <section class="valueProject">
+        <div class="container">
+          <h1>EDIT PROJECT</h1> 
+          <form action="/edit-project/{{id}}" method="post" enctype="multipart/form-data">
+            <div>
+              <label for="name">Project Name</label><br />
+              <input class="style" type="text" id="name" name="inputName" value="{{dataRows.name}}"/>
+            </div>
+            <div>
+                <div id="inputDate">
+                    <div class="col_date">
+                        <label for="startDate">Start Date</label><br>
+                        <input type="text" onfocus="(this.type='date')" id="startDate" name="inputStartDate" value="{{dataRows.sDate}}">                     
+                    </div>
+                    <div class="col_date">
+                        <label for="endDate">End Date</label><br>
+                        <input type="text" onfocus="(this.type='date')" id="endDate" name="inputEndDate" value="{{dataRows.eDate}}">
+                    </div>
+
+                </div>
+            </div>
+            <div>
+              <label for="message">Description</label><br />
+              <textarea class="style" id="message" cols="40" rows="6" name="inputDesc">{{dataRows.desc}}</textarea>
+            </div>
+
+            <h4>Technologies</h4>
+            <div id="inputTech">
+              <div class="col_tech">
+                <div class="tech1 tec">
+                  <input type="checkbox" value="node" class="box" id="nodeJs" name="nodeJs">
+                  <label for="nodeJs">Node Js</label>
+                </div>
+                <div class="tech2 tec">
+                  <input type="checkbox" value="laravel" class="box" id="laravel" name="laravel">
+                  <label for="laravel">Laravel</label>
+                </div>
+              </div>
+              <div class="col_tech">
+                <div class="tech1 tec">
+                  <input type="checkbox" class="box" value="react" id="reactJs" name="reactJs">
+                  <label for="reactJs">React Js</label>
+                </div>
+                <div class="tech2 tec">
+                  <input type="checkbox" value="bootstrap" class="box" id="bootStrap" name="bootStrap">
+                  <label for="bootStrap">Bootstrap</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label for="inputImg">Upload Image</label><br />
+              <input size="30px" class="style" type="file" id="inputImg" accept="c:/Users/LENOVO/Desktop/Dumbways/Stage1-day12/uploads/{{dataRows.image}}" name="inputImg" />
+            </div>
+            <div class="btnForm">
+              <button type="submit">submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <script src="../assets/js/project.js"></script>
+</body>
+</html>

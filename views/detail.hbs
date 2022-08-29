@@ -1,0 +1,107 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="icon" href="../assets/img/logo_dumbways.png" />
+    <title>Detail Project</title>
+  </head>
+  <body>
+
+    <!-- Navigasi Bar -->
+   <nav>
+    <ul>
+      <li>
+        <a href="/">
+          <img src="../assets/img/logo_dumbways.png" alt="Dumbways" />
+        </a>
+      </li>
+      <li>
+        <a href="/"> Home </a>
+      </li>
+      <li>
+        <a href="/project"> Add Project</a>
+      </li>
+    </ul>
+
+    <div class="btn">
+          {{#if isLogin}}
+          <a href="#" class="btnAnother">
+            <button>Haii, {{user.username}}</button>
+          </a>
+            <a href="/logout" class="btnAnother">
+              <button>Logout</button>
+            </a>
+          {{else}}
+            <a href="/register" class="btnAnother">
+              <button>Register</button>
+            </a>
+            <a href="/login" class="btnAnother">
+              <button>Login</button>
+            </a>
+          {{/if}}
+      <a href="/contact" class="btnChild">
+        <button>Contact Me</button>
+      </a>
+    </div>
+  </nav>
+
+    <!-- Detail Project -->
+    <section>
+      <h1>{{dataRows.name}}</h1>
+      <div class="mainHeader">
+        <div class="image">
+          <img src="/uploads/{{dataRows.image}}" alt="Detail Project" />
+        </div>
+        <div class="side">
+          <div class="duration">
+            <h3>Duration</h3>
+            <div class="col">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>{{dataRows.startDate}} s.d. {{dataRows.endDate}}</span>
+            </div>
+            <div class="col">
+              <i class="fa-solid fa-clock"></i>
+              <span>{{dataRows.duration}}</span>
+            </div>
+          </div>
+
+          <div class="techno">
+            <h3>Technologies</h3>
+            <div class="col">
+              <div class="row">
+                <i class="fa-brands fa-{{dataRows.technoNode}}"></i>
+              </div>
+              <div class="row">
+                <i class="fa-brands fa-{{dataRows.technoLaravel}}"></i>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row">
+
+                <i class="fa-brands fa-{{dataRows.technoReact}}"></i>
+
+              </div>
+              <div class="row">
+
+                <i class="fa-brands fa-{{dataRows.technoBoots}}"></i>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <p>
+          {{dataRows.description}}
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

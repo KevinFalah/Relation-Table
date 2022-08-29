@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap');
+
+
+/* Navigasi bar */
+nav {
+    height: 10vh;
+}
+
+
+
+.btn .btnAnother button {
+    cursor: pointer;
+    margin-right: 30px;
+    padding: 8px 20px;
+    border: none;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 8px;
+    transition: .3s;
+    font-size: 16px;
+}
+
+.btn .btnAnother button:hover {
+    color: whitesmoke;
+    background-color: black;
+}
+
+.btn .btnChild button {
+    cursor: pointer;
+    margin-right: 30px;
+    padding: 8px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.315);
+}
+
+/* Add My Project */
+section.valueProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+    height: 93vh;
+    background-color: #DCE0E4;
+}
+
+.container-login {
+    width: 450px; 
+}
+
+.container-login form input,select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px 10px;
+    border: none;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.21);
+    border-radius: 5px;
+}
+
+

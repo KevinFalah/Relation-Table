@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap');
+
+
+.bg-orange {
+    background-color: orangered;
+}
+
+.bg-orange:hover {
+    background-color: white !important;
+    color: orangered !important;
+}
+
+.container-form {
+    width: 400px;
+}
+
+.cont-height {
+    height: 93vh;
+}
+
+textarea {
+    resize: none;
+}
+
+nav {
+    height: 10vh;
+}
+
+
+/* Main */
+section.py-5 {
+    background-color: #DBDFE3;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+section .container {
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.379);
+}
+
+section .container .main-left {
+    text-align: justify;
+    flex: 2;
+}
+
+section .container .main-right {
+    flex: 1.1;
+}
+
+.btn-color {
+    background-color: black !important;
+}
+
+.link-contact {
+    width: 40%; 
+}
+
+.linkCV {
+    margin-left: 30px;
+}
+
+.sosmed {
+    width: 20%;
+}
+
+.card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.256);
+    border: none;
+}
+
+.card-foot p {
+    margin-top: -12px;
+    font-size: 16px;
+}
+
+section.gallery {
+    flex-direction: column;
+}
+
+.durasi {
+    margin-top: -10px;
+    color: grey !important;
+}
+
+.gallery-icon {
+    width: 30%;
+}
+
+.col-gallery {
+    padding-left: 70px;
+}
+
+.gallery .card-body .btn {
+    font-size: 17px;
+}   
+
+.warn {
+    color: red;
+}
+
+@media only screen and (max-width: 800px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container .sosmed{
+        width: 60%;
+    }
+}

@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navigasi bar */
+nav {
+    height: 10vh;
+    display: flex;
+    padding: 0px 40px;
+    background-color: whitesmoke;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.084);
+}
+
+nav ul {
+    display: flex;
+    flex: 1;
+    padding-left: 30px;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li img {
+    width: 80px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: .4s;
+}
+
+nav ul li a:hover {
+    font-weight: lighter;
+}
+
+.btn {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn .btnAnother button {
+    cursor: pointer;
+    margin-right: 30px;
+    padding: 8px 20px;
+    border: none;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 8px;
+    transition: .3s;
+    font-size: 16px;
+}
+
+.btn .btnAnother button:hover {
+    color: whitesmoke;
+    background-color: black;
+}
+
+.btn .btnChild button {
+    cursor: pointer;
+    margin-right: 30px;
+    padding: 8px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.315);
+}
+
+/* Add My Project */
+section.valueProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+    height: 93vh;
+    background-color: #DCE0E4;
+}
+
+.container {
+    width: 400px; 
+}
+
+.container h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.container form input,select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px 10px;
+    border: none;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.21);
+    border-radius: 5px;
+}
+
+.container h4 {
+    margin-bottom: 13px;
+}
+
+.container #inputDate {
+    display: flex;
+    gap: 10px;
+}
+
+.container #inputDate .col_date {
+    flex: 1;
+}
+
+.container #inputTech .col_tech {
+    display: flex;
+}
+
+.container #inputTech .col_tech .tec {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container #inputTech .col_tech .tech1 {
+    flex: 1;
+}
+
+.container #inputTech .col_tech .tech2 {
+    flex: 1;
+}
+
+.container #inputTech .col_tech .tec input {
+    box-shadow: none;
+    width: 30px;
+    margin-right: 7px;
+}
+
+form input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.container form textarea {
+    border: none;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.064);
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+    padding: 8px 10px;
+}
+
+.container form div label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.container form #inputImg {
+    background-color: white;
+}
+
+#inputImg {
+    padding: 10px 20px;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.279);
+    position: relative;
+}
+
+#inputImg::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+#inputImg::before {
+    content: 'choose';
+    display: inline-block;
+    background-color: #E4E4E4;
+    border: 1px solid rgba(0, 0, 0, 0.187);
+    border-radius: 3px;
+    padding: 13px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 15px;
+    color: #B4ADAD;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s;
+  }
+
+#inputImg:hover::before {
+    background-color: #ffffff;
+  }
+
+#inputImg:active::before {
+    background: linear-gradient(top, #e3e3e3, #f9f9f9);
+  } 
+
+.container form .btnForm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.container form button {
+    cursor: pointer;
+    padding: 5px 25px;
+    border: none;
+    margin-top: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: end;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.315);
+}
+
+
+/* Gallery */
+section.gallery {
+    background-color: #F8F8F8;
+    padding: 50px 10px 50px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery h1 {
+    margin-bottom: 30px;
+}
+
+.gallery .mainGallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    padding-left: 30px;
+}
+
+
+.gallery #card {
+    width: 400px;
+    padding: 10px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.265);
+    border-radius: 13px;
+}
+
+.gallery #card img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.gallery #card h1 {
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+
+.gallery #card #durasi {
+    font-size: 13px;
+    font-weight: 400;
+    color: #746F6F;
+    margin-bottom: 25px;
+}
+
+.gallery #card p {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.gallery #card .icon i {  
+    font-size: 25px;
+    margin-right: 13px;
+}
+
+.gallery #card .btn {
+    display: flex;
+    gap: 5px;
+    margin-top: 25px;
+}
+
+.gallery #card .btn #btnEdit, #btnDelete {
+    flex: 1;
+    cursor: pointer;
+    padding: 4px 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.315);
+}
+
+
